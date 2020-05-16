@@ -6,7 +6,7 @@ public class IIReverseNominatim {
     private let email: String?
     private let nominatimURL: URL
     
-    init(withEmail email: String? = nil) {
+    public init(withEmail email: String? = nil) {
         self.email = email
         self.nominatimURL = URL(string: Constants.nominatimHost+Constants.endpoint)!
     }

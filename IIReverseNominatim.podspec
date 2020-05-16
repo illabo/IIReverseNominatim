@@ -71,6 +71,7 @@ TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
   #
 
   spec.author             = { "Ilya Yachin" => "uin153974748@gmail.com" }
+  spec.homepage         = 'https://github.com/illabo/IIReverseNominatim'
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
