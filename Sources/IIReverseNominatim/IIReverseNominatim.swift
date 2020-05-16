@@ -31,6 +31,7 @@ public class IIReverseNominatim {
             )
             return
         }
+        
         let session = URLSession.shared
         session.dataTask(with: request){data,response,error in
             
@@ -39,11 +40,11 @@ public class IIReverseNominatim {
                 return
             }
             if let response = (response as? HTTPURLResponse), (200...299 ~= response.statusCode) == false {
-                completion(.failure(NSError(domain: "Dadata HTTP response", code: response.statusCode, userInfo: ["description": response.description])))
+                completion(.failure(NSError(domain: "Nominatim HTTP response", code: response.statusCode, userInfo: ["description": response.description])))
                 return
             }
             guard let data = data else {
-                completion(.failure(NSError(domain: "Dadata HTTP response", code: -1, userInfo: ["description": "missing data in response"])))
+                completion(.failure(NSError(domain: "Nominatim HTTP response", code: -1, userInfo: ["description": "missing data in response"])))
                 return
             }
             do {

@@ -38,33 +38,37 @@ public struct ReverseGeocodeRequest {
     public func buildRequest(baseURL: URL) -> URLRequest? {
         var components = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
         components?.queryItems = [
-        URLQueryItem(name: "lat", value: String(lat)),
-        URLQueryItem(name: "lon", value: String(lon)),
-        URLQueryItem(name: "addressdetails", value: {
-            switch addressdetails{
-            case let d where d > 1:
-                return String(1)
-            case let d where d < 0:
-                return String(0)
-            default:
-                return String(addressdetails)
-            }
-        }()),
-        URLQueryItem(name: "accept-language", value: acceptLanguage),
-        URLQueryItem(name: "zoom", value: {
-            switch zoom{
-            case let z where z > 18:
-                return String(18)
-            case let z where z < 0:
-                return String(0)
-            default:
-                return String(zoom)
-            }
-        }()),
-        URLQueryItem(name: "email", value: email)
+            URLQueryItem(name: "format", value: format),
+            URLQueryItem(name: "lat", value: String(lat)),
+            URLQueryItem(name: "lon", value: String(lon)),
+            URLQueryItem(name: "addressdetails", value: {
+                switch addressdetails{
+                case let d where d > 1:
+                    return String(1)
+                case let d where d < 0:
+                    return String(0)
+                default:
+                    return String(addressdetails)
+                }
+            }()),
+            URLQueryItem(name: "accept-language", value: acceptLanguage),
+            URLQueryItem(name: "zoom", value: {
+                switch zoom{
+                case let z where z > 18:
+                    return String(18)
+                case let z where z < 0:
+                    return String(0)
+                default:
+                    return String(zoom)
+                }
+            }()),
+            URLQueryItem(name: "email", value: email)
         ]
         guard let url = components?.url else { return  nil }
         
-        return URLRequest(url: url)
+        var request = URLRequest(url: url)
+        request.httpMethod = "GET"
+        
+        return request
     }
 }
