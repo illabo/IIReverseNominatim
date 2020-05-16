@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "IIReverseNominatim"
-  spec.version      = "0.1.0"
+  spec.version      = "0.1.1"
   spec.summary      = "Yet another Nominatim reverse geocoder."
 
   # This description is used to generate tags and improve search results.
@@ -26,7 +26,7 @@ Pod::Spec.new do |spec|
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
   Yet another Nominatim reverse geocoder. The little difference is it requests data in GeocodeJSON format.
-                   DESC
+                         DESC
 
 #  spec.homepage     = "http://EXAMPLE/IIReverseNominatim"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
@@ -56,7 +56,8 @@ DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
 TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
 0. You just DO WHAT THE FUCK YOU WANT TO.
-       LICENSE
+
+                   LICENSE
    }
 
 
@@ -70,7 +71,7 @@ TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
   #  profile URL.
   #
 
-  spec.author             = { "Ilya Yachin" => "uin153974748@gmail.com" }
+  spec.author           = { "Ilya Yachin" => "uin153974748@gmail.com" }
   spec.homepage         = 'https://github.com/illabo/IIReverseNominatim'
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

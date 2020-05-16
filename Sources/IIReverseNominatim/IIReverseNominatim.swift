@@ -11,7 +11,7 @@ public class IIReverseNominatim {
         self.nominatimURL = URL(string: Constants.nominatimHost+Constants.endpoint)!
     }
     
-    public func reverseGeocode(lat: Double, lon: Double, addressDetails: Int = 0, zoom: Int = 18, language: String? = nil, completion: @escaping (Result<FeatureCollection, Error>)->Void){
+    public func reverseGeocode(lat: Double, lon: Double, addressDetails: Bool = false, zoom: Int = 18, language: String? = nil, completion: @escaping (Result<FeatureCollection, Error>)->Void){
         var req = ReverseGeocodeRequest(lat: lat, lon: lon)
         req.email = email
         req.acceptLanguage = language
