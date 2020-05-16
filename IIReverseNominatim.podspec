@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "IIReverseNominatim"
-  spec.version      = "0.1.2"
+  spec.version      = "0.1.3"
   spec.summary      = "Yet another Nominatim reverse geocoder."
 
   # This description is used to generate tags and improve search results.
@@ -98,7 +98,7 @@ TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
 
   spec.source       = { :git => "https://github.com/illabo/IIReverseNominatim.git",
       branch: 'release',
-      tag: s.version.to_s }
+      tag: spec.version.to_s }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
