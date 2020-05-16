@@ -28,63 +28,63 @@ import Foundation
  */
 public struct FeatureCollection : Decodable {
         ///GeocodeJSON result
-        let features : [Feature]?
-        let geocoding : FeatureCollectionGeocoding?
-        let type : String?
+        public let features : [Feature]?
+        public let geocoding : FeatureCollectionGeocoding?
+        public let type : String?
 }
-struct FeatureCollectionGeocoding : Codable {
+public struct FeatureCollectionGeocoding : Codable {
     ///Default: null. The attribution of the data. In case of multiple sources,
     ///and then multiple attributions, can be an object with one key by source.
-    let attribution : String?
+    public let attribution : String?
     ///Default: null. The licence of the data. In case of multiple sources,
     ///and then multiple licences, can be an object with one key by source.
-    let licence : String?
+    public let licence : String?
     ///Default: null. The query that has been issued to trigger the
     ///search.
-    let query : String?
+    public let query : String?
     ///A semver.org compliant version number. Describes the version of
     ///the GeocodeJSON spec that is implemented by this instance.
-    let version : String?
+    public let version : String?
 }
 public struct Feature : Decodable {
-    let geometry : Geometry?
-    let properties : Property?
-    let type : String?
+    public let geometry : Geometry?
+    public let properties : Property?
+    public let type : String?
 }
 public struct PropertyGeocoding : Decodable {
-    let accuracy : Int?
-    let admin : Admin?
-    let city : String?
-    let country : String?
-    let county : String?
-    let district : String?
+    public let accuracy : Int?
+    public let admin : Admin?
+    public let city : String?
+    public let country : String?
+    public let county : String?
+    public let district : String?
     ///Geohash encoding of coordinates: [see tips](http://geohash.org/site/tips.html).
-    let geohash : String?
-    let housenumber : String?
-    let label : String?
-    let locality : String?
-    let name : String?
-    let postcode : String?
-    let state : String?
-    let street : String?
-    let type : String?
+    public let geohash : String?
+    public let housenumber : String?
+    public let label : String?
+    public let locality : String?
+    public let name : String?
+    public let postcode : String?
+    public let state : String?
+    public let street : String?
+    public let type : String?
 }
 public struct Admin : Decodable {
-    let level1 : String?
-    let level2 : String?
-    let level3 : String?
-    let level4 : String?
-    let level5 : String?
-    let level6 : String?
-    let level7 : String?
-    let level8 : String?
-    let level9 : String?
-    let level10 : String?
+    public let level1 : String?
+    public let level2 : String?
+    public let level3 : String?
+    public let level4 : String?
+    public let level5 : String?
+    public let level6 : String?
+    public let level7 : String?
+    public let level8 : String?
+    public let level9 : String?
+    public let level10 : String?
 }
 public struct Geometry : Decodable {
-    let coordinates : [Float]?
-    let type : String?
+    public let coordinates : [Float]?
+    public let type : String?
 }
 public struct Property : Decodable {
-    let geocoding : PropertyGeocoding?
+    public let geocoding : PropertyGeocoding?
 }
